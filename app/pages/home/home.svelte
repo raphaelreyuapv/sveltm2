@@ -22,7 +22,7 @@
 			<div class="container">
 				{#each things as thing}
 					<h1 class="title">{thing.name}</h1>
-					<h2 class="subtitle">{thing.price}</h2>
+					<h2 class="subtitle">{thing.price}€</h2>
 					<img src={thing.pngpath} alt="club de golf lol" />
 					<a href={"#/wild/" + thing.id}>Go</a>
 				{/each}
