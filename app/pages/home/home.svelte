@@ -11,6 +11,7 @@
 	import Menu from "@components/common/menu/menu.svelte";
 	import Footer from "@components/common/footer/footer.svelte";
 	import { translate } from "@app/translations/translate";
+	import { things } from "@app/types/global.interfaces";
 </script>
 
 <Menu />
@@ -19,8 +20,12 @@
 	<section class="hero is-medium is-primary is-bold">
 		<div class="hero-body">
 			<div class="container">
-				<h1 class="title">{translate("hello_world")}</h1>
-				<h2 class="subtitle">{translate("app_name")}</h2>
+				{#each things as thing}
+					<h1 class="title">{thing.name}</h1>
+					<h2 class="subtitle">{thing.price}</h2>
+					<img src={thing.pngpath} alt="club de golf lol" />
+					<a href={"#/wild/" + thing.id}>Go</a>
+				{/each}
 			</div>
 		</div>
 	</section>

@@ -9,4 +9,7 @@
  *
  */
 
-export {};
+const things = [
+    {id:0, name: 'Club de golf',pngpath:'golf.jpg',price:49},
+]
+export { things }
