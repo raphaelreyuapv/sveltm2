@@ -7,3 +7,15 @@
  * @license: MIT License
  *
  */
+.container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:50px 50px;
+    flex:auto;
+}
+.innercontainer{
+    display:flex;
+    flex-direction: column;
+    flex:auto;
+}

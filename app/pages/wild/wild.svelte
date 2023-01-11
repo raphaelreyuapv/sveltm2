@@ -31,7 +31,6 @@
 		distofel = Math.sqrt(distofel);
 		recommendations.push({ recValue: Number(distofel), item: element }); //insert distance with item
 	});
-
 	recommendations.sort((a, b) => (a.recValue > b.recValue ? -1 : 1)); //descending sort
 </script>
 
@@ -50,7 +49,9 @@
 	<div class="content has-text-centered" />
 	{#each recommendations as rec}
 		<h1 class="title">{rec.item.name}</h1>
-		<img src={rec.item.pngpath} alt="?" />
+		<a href={"#/wild/" + rec.item.id} data-sveltekit-reload rel="external">
+			<img src={rec.item.pngpath} alt="?" /></a
+		>
 		<p>{rec.item.price}€</p>
 		<p>Valeur de recommendation:{rec.recValue}</p>
 	{/each}
